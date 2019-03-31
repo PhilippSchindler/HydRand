@@ -4,5 +4,6 @@
 # except this file
 !.gitignore
 
-# and any zipped logs
+# and any zipped logs and shell scripts
 !*.zip
+!*.sh
