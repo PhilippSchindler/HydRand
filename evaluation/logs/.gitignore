@@ -7,3 +7,4 @@
 # and any zipped logs and shell scripts
 !*.zip
 !*.sh
+!*.md
