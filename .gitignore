@@ -1,0 +1,13 @@
+__pycache__
+.pytest_cache
+.mypy_cache
+.vscode
+.travis.yml
+*.egg-info
+*.pem
+output
+logs
+aws/hydrand-base.zip
+aws/hydrand.zip
+config/network/amazon.txt
+
