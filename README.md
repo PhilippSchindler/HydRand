@@ -11,6 +11,18 @@ While the main functionally,
 including signatures checks and verification procedures of the messages,
 have been fully implemented the code is still considered a prototype and **NOT SAFE TO USE IN PRODUCTION**. Please contact me or one of my team members at SBA research if you are interested in running HydRand in production.
 
+## Flowchart
+
+(Somewhat simplified) figure of the internals of the Hydrand protocol, from the view of an individual Hydrand node.
+
+![throughput](figures/flowchart.png)
+
+## Message Format
+
+Overview of format of the messages exchanged by HydRand nodes.
+
+![throughput](figures/message_format.png)
+
 ## Performance evaluation
 
 We tested the performance of the protocol using Amazon Web Services (AWS) with up to 128 EC2 instances of type `t2.micro` (1GB of RAM, 1 virtual CPU core, and a 60-80 Mbit/s internet connection) in different globally distributed datacenters.
