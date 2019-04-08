@@ -71,12 +71,12 @@ The following figures shows the sent data in Mbit/s for different runs with the 
 
 ![sendruns](evaluation/figures/send_runs.png)
 
-The following figure shows the data received in a normal run with 128 nodes on every node.
+The following figure shows the detailed data received in a normal run with 128 nodes for every node.
 The bursts show that almost all nodes have been selected as leader and broadcasted a propose message.
 
-![sendall](evaluation/figures/send_runs.png)
+![sendall](evaluation/figures/send_all.png)
 
-The following figure shows the data received in a normal run with 128 nodes on every node.
+The following figure shows the data received in a normal run with 128 nodes for every node.
 
 ![recvall](evaluation/figures/recv_all.png)
 
