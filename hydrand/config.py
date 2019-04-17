@@ -36,7 +36,7 @@ PROTOCOL_START_CONNECT_DELAY = 10.0
 PROTOCOL_STARTUP_DELAY = 5.0
 PROTOCOL_START_TIME = time.time() + PROTOCOL_START_CONNECT_DELAY + PROTOCOL_STARTUP_DELAY
 
-_PHASE_DURATION = 1.0
+_PHASE_DURATION = 5.0
 
 PROPOSE_PHASE_DURATION = _PHASE_DURATION
 ACKNOWLEDGE_PHASE_DURATION = _PHASE_DURATION
@@ -45,7 +45,7 @@ ROUND_DURATION = PROPOSE_PHASE_DURATION + ACKNOWLEDGE_PHASE_DURATION + VOTE_PHAS
 
 MAX_TIMEOUT = 3.0  # 0.0 to disable
 
-FAST_MODE_ENABLED = True
+FAST_MODE_ENABLED = False
 
 
 CONFIG_BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "config"))
@@ -119,7 +119,7 @@ def parse_cli_arguments():
         MAX_TIMEOUT = args.max_timeout
 
     NETWORK_CONFIG = args.network_config or NETWORK_CONFIG
-    FAST_MODE_ENABLED = not args.sync_mode
+    FAST_MODE_ENABLED = args.fast_mode
 
     if args.num_rounds is not None:
         NUM_ROUNDS = args.num_rounds
