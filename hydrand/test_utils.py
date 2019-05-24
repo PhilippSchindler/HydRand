@@ -13,7 +13,7 @@ class OpResult:
         instance.values = values
         instance.all_equal = all_equal(values)
         if instance.all_equal:
-            if values[0] in [None, True, False] and not isinstance(values[0], int):
+            if values[0] is None or values[0] is True or values[0] is False:
                 return values[0]
             instance.value = values[0]
         return instance

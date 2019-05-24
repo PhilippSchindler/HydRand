@@ -10,6 +10,9 @@ from hydrand.node import Node
 
 from hydrand.test_utils import AnyNode, LeaderNode, NoLeaderNode, force_close_port
 
+import hydrand.node as node_module
+
+
 STARTUP_DELAY = 5.0
 
 node: AnyNode  # any call to this node is multiplexed to all other nodes
@@ -22,7 +25,10 @@ nodes: List[Node]
 def nodes_setup_and_teardown():
     global node, nodes, leader, noleader
     force_close_port(5000)
+
+    node_module.PROTOCOL_START_TIME = time.time() + STARTUP_DELAY
     nodes = [Node(i) for i in range(N)]
+
     node = AnyNode(nodes)
     leader = LeaderNode(nodes)
     noleader = NoLeaderNode(nodes)
@@ -33,6 +39,7 @@ def nodes_setup_and_teardown():
     time.sleep(STARTUP_DELAY / 2)
 
     yield
+    print("TEST TEARDOWN")
     node.shutdown()
 
 

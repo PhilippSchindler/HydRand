@@ -110,8 +110,8 @@ class Node:
     _last_confirmed_round: int = 0
 
     # the protocol start running at the begining of round 1
-    # as soon as we advance from round 0 to round 1, _round_start is automatically advanced to PROOTOCOL_START_TIME
-    _t_round_start: float = PROTOCOL_START_TIME - ROUND_DURATION
+    # as soon as we advance from round 0 to round 1, _round_start is automatically advanced to PROTOCOL_START_TIME
+    _t_round_start: float
     _t_round_end: float
     _t_ack_phase_start: float
     _t_vote_phase_start: float
@@ -143,6 +143,7 @@ class Node:
             self.logger.addHandler(logging.FileHandler(LOG_FILE_PATH, mode='w'))
             self.logger.propagate = False
 
+        self._t_round_start = PROTOCOL_START_TIME - ROUND_DURATION
         self.ID = node_id
         self.KEYPAIR = NODE_INFOS[self.ID].keypair
         self.OTHER_PUBLIC_KEYS = [n.public_key for n in NODE_INFOS if n.id != self.ID]
