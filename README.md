@@ -1,7 +1,7 @@
 # HydRand
 
 This is a python implementation of the HydRand protocol for generating publicly-verifiable randomness in a distributed fashion.
-The corresponding research paper is available at [https://eprint.iacr.org/2018/319](https://eprint.iacr.org/2018/319). An updated version will appear shortly.
+The corresponding research paper is accepted for the IEEE S&P conference and available online at [https://doi.ieeecomputersociety.org/10.1109/SP40000.2020.00003](https://doi.ieeecomputersociety.org/10.1109/SP40000.2020.00003).
 This work is a joint research project by my team members Aljosha Judmayer and Nicholas Stifter and myself, conducted at SBA Research and Vienna University of Technology under the supervision of Edgar Weippl.
 
 ## Security notice
